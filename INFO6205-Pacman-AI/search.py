@@ -75,7 +75,7 @@ def depthFirstSearch(problem):
     visited = []
     # push initial state to fringe
     fringe.push((problem.getStartState(), [], 1))
-    
+
     while not fringe.isEmpty():
         node = fringe.pop()
         state = node[0]
@@ -101,7 +101,7 @@ def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
     util.raiseNotDefined()
-                
+
 def nullHeuristic(state, problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
@@ -128,7 +128,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
         # goal check
         if problem.isGoalState(state):
             return actions
-        
+
         if state not in visited:
             visited.append(state)
             # visit child nodes
@@ -148,3 +148,5 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 bfs = breadthFirstSearch
 dfs = depthFirstSearch
 astar = aStarSearch
+
+# References - https://github.com/jlbyoung/CMPT310-Pacman-AI
